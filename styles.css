@@ -1,99 +1,163 @@
-body {
-    background-color: #E8E4D6;
-    margin: 0; 
-}
-
-:where(header, footer) {
+header {
     background-color: #A3B18A;
-    height: 100px;
-    text-align: center;
 }
 
-.parentDiv {
-    text-align: center;
-    margin: 0%;
-    color:rgb(2, 12, 5)
+body {
+    background-color: #FFFFFF;
+    margin: 0;
 }
 
-.subheading{
-        font-size: 1.2em; /* Adjust the font size of the subheading */
-        color: rgb(0, 0, 0); 
-        margin-top: 5px; /* Add space between title and subheading */
-        margin-bottom: 10px;
-        text-align: center; 
-    }   
+h1 {
+    font-size: 72px;
+    color: rgb(2, 12, 5);
+    margin: 0;
+    text-decoration: underline;
+    font-family: 'Georgia', serif;
+    text-align: center;    
+    
+}
 
+h2 {
+    color: rgb(0, 0, 0);
+    margin-left: 120px;
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: 36px; 
+    font-weight: bold;
 
-:where(h2, h3) {
+}
+
+h3 {
     padding-left: 5%;
+    font-size: 36px;
+    font-style: italic;
+}
+
+p {
+    margin-left: 7%;
+    margin-right: 50%;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+footer {
+    background-color: #A3B18A;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse; /* Ensures borders don’t double up */
+}
+
+td, th, tr {
+    border: 0px solid black;
+    padding: 8px;
+    text-align: center;
+    font-size: 25px; /* Add 'px' to specify units for font size */
+}
+
+td a, th a {
+    font-size: initial; /* Apply same font size to links */
+    color: inherit; /* Make links inherit the text color of the parent */
+    text-decoration: none; /* Optional: Remove underline from links */
 }
 
 
 
-
-    .contact_Button { 
-    margin-left: 5%;
-    padding: 5px;
-    background-color: #ae8ab1;
-    border-radius: 5%;
-    font-size: 20px  ;
-    border-style: solid;
-    cursor: pointer;
-    }
-
-    .contact_Button:hover { 
-        margin-left: 5%;
-        padding: 5px;
-        background-color: #d277db;
-        border-radius: 5%;
-        font-size: 20px  ;
-        font-weight: bold;
-        border-style: solid;
-        cursor: pointer;
-    }
-
-    .about{
-        margin-left: 7%;
-        margin-right: 50%;
-    }
-
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-
-a:hover {
-    color: #ffffff;
-    background-color: transparent;
-    text-decoration: none;
-}
-
-
-
-    .photo-grid {
+.photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 15px;
     margin: 20px;
-    margin-top: auto;
 }
-  .photo-item {
-    text-align: center
+
+.photo-item {
+    text-align: center;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: #4A4A4A; 
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+  
+    a:hover {
+    color: #270eb5; 
+    transform: translateY(-2px); 
+}
+  
+  a:focus {
+    outline: none;
+    border-bottom: 2px solid #150267;
+}
+  
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #A3B18A; 
+}
+
+.button-container a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.button-container a:hover {
+    color: #007bff; 
+}
+
+.centered-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+#main-img {
+    margin: 20px;
+}
+
+
+.icon {
+    width: clamp(50px, 3vw, 100px);
+    margin-left: 100px;
   }
+  
+#stockist_table {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+} 
 
-    img{
-    width:fit-content;
-    height: auto;
-    max-height: 400px;  
-    cursor: pointer;
-   }
+.website_link {
+    color: #A3B18A;
+    white-space: nowrap;
+}
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create 3 equal columns */
+    gap: 16px; /* Add spacing between items */
+    justify-items: center; /* Center items horizontally within their grid cells */
+    align-items: center; /* Center items vertically within their grid cells */
+}
 
+.grid_img {
+    max-width: 500px; /* Ensure images fit within their grid cells */
+    height: auto; /* Maintain aspect ratio */
+}
 
-
-   .footer {
-    text-align: left;
-   }
