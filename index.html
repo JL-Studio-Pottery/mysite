@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="Keywords" content="Handmade Pottery, Ceramic Art, Tulipieres, Pottery Vases">
+    <meta name="keywords" content="Handmade Pottery, Ceramic Art, Tulipieres, Pottery Vases">
     <meta name="author" content="Julie LoRusso">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JL Studio Pottery</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="about" href="about.html">
-    <link rel="gallery" href="gallery.html">
-    <link rel="icon" href="assets/Logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/Logo.webp" type="image/webp">
 </head>
 
 <body>
-
     <header>
-        <h1>JL</h1>
-
-        <h1>Studio Pottery</h1>  
-
-        <div class="button-container">
-            <a href="stockist.html">STOCKISTS</a>
-            <a href="intex.html">Home</a>
-            <a href="gallery.html">GALLERY</a>
+        <div class="header-content">
+            <h1>JL Studio Pottery</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="stockist.html">STOCKISTS</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    
-    
-    <div class="centered-flex">
-        <img  src="assets/lion-urn.jpg" alt="lion-urn" id="main-img">
-    </div>
-        
-        <h2>
-            About
-        </h2>
 
-        <p>
-            Julie LoRusso works from her garden home studio in Virginia. A self-taught ceramic artist, she combines various methods of working with clay, adorning wheel-thrown forms with sculpted details, as well as using slip casting and hand-building techniques. Inspired by the tulipières she saw in Amsterdam and London, Julie creates one-of-a-kind porcelain functional works that are also sculptural art when not in use.
-        </p>
-        <p>
-            JL Studio Pottery is sold through select home and interior boutiques. If you’re interested in becoming a stockist, please email.
-        </p>
+    <main class="container">
+        <section class="hero">
+            <img src="assets/lion-urn.webp" 
+                 alt="Handcrafted lion urn pottery piece" 
+                 class="responsive-image"
+                 loading="lazy">
+        </section>
 
+        <section class="about-section">
+            <h2>About the Artist</h2>
+            <div class="content-wrapper">
+                <p class="lead-text">
+                    Julie LoRusso creates unique ceramic art from her garden studio in Virginia. Specializing in porcelain functional works that transform into sculptural art, her pieces blend wheel-thrown forms with intricate hand-sculpted details.
+                </p>
+            </div>
+        </section>
 
-       
-   
-  
+        <section class="cta-section">
+            <div class="cta-content">
+                <h3>Experience Handcrafted Elegance</h3>
+                <a href="gallery.html" class="cta-button">View Collection</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
-            <h2>
-                Contact
-            </h2>
-            <a href="https://www.instagram.com/jl_pottery?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-                <img class="icon" src="assets/instagram.svg" alt="Instagram">
-            </a>
-            
-            <a href="mailto:jlstudiopottery@gmail.com" class="email-button">
-                <img class="icon" src="assets/Email.png" alt="Email">
-            </a>
+        <div class="footer-content">
+            <h2 class="footer-heading">Connect With Us</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/jl_pottery" 
+                   aria-label="Visit our Instagram page"
+                   class="social-icon">
+                    <img src="assets/instagram.svg" 
+                         alt="Instagram logo"
+                         loading="lazy">
+                </a>
+                <a href="mailto:jlstudiopottery@gmail.com" 
+                   aria-label="Send us an email"
+                   class="social-icon">
+                    <img src="assets/Email.webp" 
+                         alt="Email icon"
+                         loading="lazy">
+                </a>
+            </div>
+            <p class="copyright">&copy; 2025 JL Studio Pottery</p>
+        </div>
     </footer>
 </body>
-
 </html>
