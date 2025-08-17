@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Tests</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .pass { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .fail { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .test-summary { margin-top: 20px; padding: 15px; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Website Test Runner</h1>
+    <div id="test-results"></div>
+    <div id="test-summary" class="test-summary"></div>
+
+    <script>
+        // Test framework
+        class TestRunner {
+            constructor() {
+                this.tests = [];
+                this.results = [];
+            }
+
+            // Add a test case
+            addTest(name, testFn) {
+                this.tests.push({ name, testFn });
+            }
+
+            // Run all tests
+            async run() {
+                this.results = [];
+                const resultsContainer = document.getElementById('test-results');
+                resultsContainer.innerHTML = '';
+
+                for (const test of this.tests) {
+                    try {
+                        const result = await test.testFn();
+                        this.results.push({ name: test.name, passed: result.passed, message: result.message });
+                        this.displayResult(test.name, result.passed, result.message);
+                    } catch (error) {
+                        this.results.push({ name: test.name, passed: false, message: error.message });
+                        this.displayResult(test.name, false, error.message);
+                    }
+                }
+
+                this.displaySummary();
+            }
+
+            // Display individual test result
+            displayResult(name, passed, message) {
+                const resultsContainer = document.getElementById('test-results');
+                const resultElement = document.createElement('div');
+                resultElement.className = `test-result ${passed ? 'pass' : 'fail'}`;
+                resultElement.innerHTML = `<strong>${name}</strong>: ${passed ? 'PASS' : 'FAIL'} - ${message}`;
+                resultsContainer.appendChild(resultElement);
+            }
+
+            // Display test summary
+            displaySummary() {
+                const passedTests = this.results.filter(r => r.passed).length;
+                const totalTests = this.results.length;
+                const summaryContainer = document.getElementById('test-summary');
+                
+                summaryContainer.className = `test-summary ${passedTests === totalTests ? 'pass' : 'fail'}`;
+                summaryContainer.innerHTML = `Tests: ${passedTests}/${totalTests} passed`;
+            }
+        }
+
+        // Initialize test runner
+        const testRunner = new TestRunner();
+
+        // Test functions
+        async function testPageLoad(url) {
+            try {
+                const response = await fetch(url);
+                return {
+                    passed: response.ok,
+                    message: response.ok ? `Page loaded successfully` : `Failed to load page (${response.status})`
+                };
+            } catch (error) {
+                return {
+                    passed: false,
+                    message: `Network error: ${error.message}`
+                };
+            }
+        }
+
+        // Add tests
+        testRunner.addTest('Home page loads', () => testPageLoad('../index.html'));
+        testRunner.addTest('Gallery page loads', () => testPageLoad('../gallery.html'));
+        testRunner.addTest('Stockists page loads', () => testPageLoad('../stockist.html'));
+
+        // Run tests when page loads
+        window.addEventListener('load', () => {
+            testRunner.run();
+        });
+    </script>
+</body>
+</html>

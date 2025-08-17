@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="keywords" content="Handmade Pottery, Ceramic Art, Tulipieres, Pottery Vases">
-    <meta name="author" content="Julie LoRusso">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JL Studio Pottery</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta name=\"description\" content=\"JL Studio Pottery by Julie LoRusso creates artisanal ceramics and porcelain works inspired by nature and European antiques. Discover unique, handcrafted pottery pieces.\">
+    <!-- Open Graph / Facebook -->
+    <meta property=\"og:type\" content=\"website\">
+    <meta property=\"og:url\" content=\"https://jlstudiopottery.com/\">
+    <meta property=\"og:title\" content=\"JL Studio Pottery - Artisanal Ceramics by Julie LoRusso\">
+    <meta property=\"og:description\" content=\"JL Studio Pottery by Julie LoRusso creates artisanal ceramics and porcelain works inspired by nature and European antiques. Discover unique, handcrafted pottery pieces.\">
+    <meta property=\"og:image\" content=\"https://jlstudiopottery.com/assets/Logo.webp\">
+    <!-- Twitter -->
+    <meta property=\"twitter:card\" content=\"summary_large_image\">
+    <meta property=\"twitter:url\" content=\"https://jlstudiopottery.com/\">
+    <meta property=\"twitter:title\" content=\"JL Studio Pottery - Artisanal Ceramics by Julie LoRusso\">
+    <meta property=\"twitter:description\" content=\"JL Studio Pottery by Julie LoRusso creates artisanal ceramics and porcelain works inspired by nature and European antiques. Discover unique, handcrafted pottery pieces.\">
+    <meta property=\"twitter:image\" content=\"https://jlstudiopottery.com/assets/Logo.webp\">
+    <title>JL Studio Pottery - Artisanal Ceramics by Julie LoRusso</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="assets/Logo.webp" type="image/webp">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="header-content">
-            <h1>JL Studio Pottery</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="stockist.html">STOCKISTS</a></li>
+    <!-- Global Navigation -->
+    <nav class="global-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">JL Studio Pottery</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="#stockists" class="nav-link">Stockists</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
-        <section class="hero">
-            <img src="assets/lion-urn.webp" 
-                 alt="Handcrafted lion urn pottery piece" 
-                 class="responsive-image"
-                 loading="lazy">
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>JL Studio Pottery</h1>
+            <h2>by Julie LoRusso</h2>
+            <p class="hero-tagline">Artisanal ceramics and porcelain works inspired by the timeless forms of nature and European antiques.</p>
+        </div>
+    </section>
 
-        <section class="about-section">
-            <h2>About the Artist</h2>
-            <div class="content-wrapper">
-                <p class="lead-text">
-                    Julie LoRusso creates unique ceramic art from her garden studio in Virginia. Specializing in porcelain functional works that transform into sculptural art, her pieces blend wheel-thrown forms with intricate hand-sculpted details.
-                </p>
+    <!-- Key Image Section -->
+    <section class="key-image-section">
+        <div class="container">
+            <div class="key-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                     alt="Artisanal ceramic vase with elegant form and natural texture" 
+                     class="key-image">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="cta-section">
-            <div class="cta-content">
-                <h3>Experience Handcrafted Elegance</h3>
-                <a href="gallery.html" class="cta-button">View Collection</a>
+    <!-- Stockists Section -->
+    <section id="stockists" class="stockists">
+        <div class="container">
+            <h3>Stockists</h3>
+            <div class="stockists-list">
+                <a href="https://www.instagram.com/shop_manse" target="_blank" rel="noopener" class="stockist-link">@shop_manse</a>
+                <a href="https://www.instagram.com/patina_collection" target="_blank" rel="noopener" class="stockist-link">@patina_collection</a>
+                <a href="https://www.instagram.com/houseboundinteriors" target="_blank" rel="noopener" class="stockist-link">@houseboundinteriors</a>
+                <a href="https://www.instagram.com/carteblanchexd" target="_blank" rel="noopener" class="stockist-link">@carteblanchexd</a>
+                <a href="https://www.instagram.com/heritageclt" target="_blank" rel="noopener" class="stockist-link">@heritageclt</a>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <div class="footer-content">
-            <h2 class="footer-heading">Connect With Us</h2>
-            <div class="social-links">
-                <a href="https://www.instagram.com/jl_pottery" 
-                   aria-label="Visit our Instagram page"
-                   class="social-icon">
-                    <img src="assets/instagram.svg" 
-                         alt="Instagram logo"
-                         loading="lazy">
-                </a>
-                <a href="mailto:jlstudiopottery@gmail.com" 
-                   aria-label="Send us an email"
-                   class="social-icon">
-                    <img src="assets/Email.webp" 
-                         alt="Email icon"
-                         loading="lazy">
-                </a>
+    <!-- Global Footer -->
+    <footer class="global-footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="https://www.instagram.com/jl_pottery/" target="_blank" rel="noopener" class="footer-link">@jl_pottery</a>
+                <p class="footer-copyright">© 2024 JL Studio Pottery</p>
             </div>
-            <p class="copyright">&copy; 2025 JL Studio Pottery</p>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
