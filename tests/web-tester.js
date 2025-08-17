@@ -38,12 +38,13 @@ class WebTester {
             // Check for basic required elements
             const hasTitle = !!doc.querySelector('title');
             const hasNav = !!doc.querySelector('nav');
+            const hasMain = !!doc.querySelector('main');
             const hasSection = !!doc.querySelector('section');
             const hasFooter = !!doc.querySelector('footer');
             
             return {
-                success: hasTitle && hasNav && hasSection && hasFooter,
-                message: hasTitle && hasNav && hasSection && hasFooter ? 
+                success: hasTitle && hasNav && hasMain && hasSection && hasFooter,
+                message: hasTitle && hasNav && hasMain && hasSection && hasFooter ? 
                     'HTML structure is valid' : 
                     'Missing required HTML elements'
             };

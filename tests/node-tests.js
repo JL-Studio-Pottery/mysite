@@ -32,10 +32,11 @@ async function checkHtmlStructure(filePath) {
         // Check for required elements
         const hasTitle = /<title>.*<\/title>/i.test(html);
         const hasNav = /<nav/i.test(html);
+        const hasMain = /<main/i.test(html);
         const hasSection = /<section/i.test(html);
         const hasFooter = /<footer/i.test(html);
         
-        if (hasTitle && hasNav && hasSection && hasFooter) {
+        if (hasTitle && hasNav && hasMain && hasSection && hasFooter) {
             return { success: true, message: 'HTML structure is valid' };
         } else {
             return { success: false, message: 'Missing required HTML elements' };

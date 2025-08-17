@@ -33,3 +33,12 @@
 - Performance checks
 - SEO checks
 **Status**: Complete
+
+## Additional Improvements
+**Goal**: Address specific issues identified in user feedback
+**Success Criteria**: 
+- Semantic HTML tags are properly used
+- Testing framework is high quality and has good coverage
+- Images from assets folder are used in gallery section
+- Placeholder image on front page is replaced with real image
+**Status**: Complete
