@@ -42,3 +42,10 @@
 - Images from assets folder are used in gallery section
 - Placeholder image on front page is replaced with real image
 **Status**: Complete
+
+**Issue Resolved**: 
+- Gallery page was using placeholder images from picsum.photos instead of local assets
+- Front page was using a placeholder image from Unsplash instead of local assets
+- Both issues have been resolved by updating the HTML to reference local assets in the assets folder
+- Added documentation comments in the HTML files to indicate when and why the changes were made
+- Updated QWEN.md to reflect the status of image optimization work
